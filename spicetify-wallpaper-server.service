@@ -1,0 +1,15 @@
+[Unit]
+Description=Local HTTP server for Spicetify Retroblur wallpaper
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.config/spicetify/Themes/Retroblur/assets
+ExecStart=/usr/bin/python -m http.server 24832
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
+
+
